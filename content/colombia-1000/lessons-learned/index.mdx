@@ -1,0 +1,56 @@
+---
+title: 'Lessons learned so far'
+---
+
+<h4>Data table</h4>I debated between using a grid layout or a table element to display the rows of
+data representing companies. However, I opted for a table for semantic reasons - a table
+semantically indicates tabular data, which is what I wanted to display. It also lent itself nicely
+to queries and re-rendering of results.
+<br />
+<a
+  href="https://github.com/santidiazl/colombia-1000/tree/main/src/components/DataTable"
+  target="_blank"
+  rel="noreferrer"
+>
+  SEE DATA TABLE COMPONENT >>
+</a>
+
+<h4>Hooks</h4> I got to understand the useEffect hook alot more to handle side-effects, specifically,
+data fetching. I used setState to trigger useEffect calls which called the API. I created a custom hook
+for this logic since there was quite a bit of it and I wanted to separate it from my home component.
+<br />
+<a
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/hooks/useDataFetch.js"
+  target="_blank"
+  rel="noreferrer"
+>
+  SEE CUSTOM HOOK >>
+</a>
+
+<h4>Data results</h4>
+The data was not in the friendliest format - strings were all caps and had legal abbreviations included,
+and money values were just numeric. I wrote some helper functions that I wrapped in a composed function
+and it returned a formatted, user-friendly value. I also got to use the Intl object to format numbers
+into Colombian Pesos.
+<br />
+<a
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/helpers.js"
+  target="_blank"
+  rel="noreferrer"
+>
+  SEE HELPER FUNCTIONS >>
+</a>
+
+<h4>API</h4>I created a separate file for my API calls, which I then exported as an object. One call
+handled company queries for initial load, searching by region/name, or clicking the previous/next
+buttons. The other was a call to get all distinct regions, used to populate the region dropdown
+options. I learned about the URLSearchParams API to turn an object into a URL params string for the
+fetch() call.
+<br />
+<a
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/api.js"
+  target="_blank"
+  rel="noreferrer"
+>
+  SEE API FILE >>
+</a>
