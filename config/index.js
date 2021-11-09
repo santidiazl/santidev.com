@@ -82,7 +82,7 @@ module.exports = {
   },
   footerLinks: [
     {
-      name: 'Design: Gatsby starter by Konstantin Muenster',
+      name: 'Design: Gatsby starter by Konstantin Muenster, © 2021',
       url: 'https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal',
     },
     // {
