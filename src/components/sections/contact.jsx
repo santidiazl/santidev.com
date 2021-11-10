@@ -42,10 +42,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
         align-items: center;
         margin-bottom: 3rem;
       }
-      .avatar {
+      .avatarDiv {
         width: 100%;
         max-width: 8.75rem;
-        border-radius: 50%;
         margin-right: 4rem;
         margin-bottom: 2rem;
         @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -82,7 +81,9 @@ const Contact = ({ content }) => {
         <h3>{frontmatter.title}</h3>
         <MDXRenderer>{body}</MDXRenderer>
         <div className="profile">
-          <GatsbyImage className="avatar" image={getImage(frontmatter.profileImage)} />
+          <div className="avatarDiv">
+            <GatsbyImage className="avatar" image={getImage(frontmatter.profileImage)} />
+          </div>
           <div className="details">
             <strong>{frontmatter.name}</strong>
             <br />
