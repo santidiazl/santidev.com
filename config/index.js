@@ -5,7 +5,7 @@ module.exports = {
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
   siteDescription:
     'Website showcasing some of my Full Stack JavaScript work: Front End projects using React and Back End projects using Node/Express.',
-  siteUrl: 'https://www.santidiaz.com',
+  siteUrl: 'https://www.santidev.com',
   siteLanguage: 'en_US',
   siteIcon: 'content/favicon.png', // Relative to gatsby-config file
   seoTitleSuffix: '', // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"

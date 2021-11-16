@@ -1,6 +1,6 @@
 {
-  "name": "santi-diaz-personal-website",
-  "description": "My personal portfolio website",
+  "name": "sdiaz-portfolio-website",
+  "description": "Gatsby based portfolio Website",
   "version": "1.0.0",
   "author": "Santiago Diaz",
   "dependencies": {
