@@ -1,7 +1,7 @@
 module.exports = {
   // -- SITE SETTINGS -----
   author: '@santidiazl',
-  siteTitle: 'Santi Diaz | Junior Full Stack Developer',
+  siteTitle: 'Santi Diaz | React/Node Full Stack Developer',
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
   siteDescription:
     'Website showcasing some of my Full Stack JavaScript work: Front End projects using React and Back End projects using Node/Express.',
