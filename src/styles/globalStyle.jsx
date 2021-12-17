@@ -98,6 +98,11 @@ const GlobalStyle = createGlobalStyle`
         opacity: 0.1;
       }
 
+    code {
+        color: black;
+        background-color: #f4f4f4;
+    }
+
 `;
 
 export default GlobalStyle;
