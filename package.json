@@ -88,7 +88,7 @@
     "dev": "gatsby develop --port 9000 --host 0.0.0.0 --open",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|graphql|md|mdx)\"",
     "lint": "eslint .",
-    "start": "npm run develop",
+    "start": "npm run dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "cy:open": "cypress open",
