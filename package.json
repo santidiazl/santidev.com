@@ -10,6 +10,7 @@
     "@mdx-js/react": "^1.6.22",
     "@testing-library/cypress": "^8.0.1",
     "babel-plugin-styled-components": "^1.12.0",
+    "browserslist": "^4.16.5",
     "eslint-webpack-plugin": "^3.0.1",
     "fontsource-roboto": "^4.0.0",
     "framer-motion": "^5.0.0",
@@ -28,7 +29,11 @@
     "gatsby-remark-images": "^6.0.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
+    "immer": "^9.0.6",
     "intersection-observer": "^0.12.0",
+    "json-schema": "^0.4.0",
+    "nth-check": "^2.0.1",
+    "object-path": "^0.11.8",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-cookie-consent": "^6.2.3",
@@ -40,7 +45,9 @@
     "styled-components": "^5.2.1",
     "styled-modern-normalize": "^0.2.0",
     "tiny-skeleton-loader-react": "^1.1.4",
-    "typescript": "^4.4.4"
+    "trim": "^0.0.3",
+    "typescript": "^4.4.4",
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
