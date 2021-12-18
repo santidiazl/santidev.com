@@ -2,8 +2,8 @@
 title: 'Lessons learned so far'
 ---
 
-<h4>Data table</h4>I debated between using a grid layout or a table element to display the rows of
-data representing companies. However, I opted for a table for semantic reasons - a table
+<h4>Displaying tabular data</h4>I debated between using a grid layout or a table element to display
+the rows of data representing companies. However, I opted for a table for semantic reasons - a table
 semantically indicates tabular data, which is what I wanted to display.
 <br />
 <a
@@ -14,7 +14,7 @@ semantically indicates tabular data, which is what I wanted to display.
   SEE DATA TABLE COMPONENT >>
 </a>
 
-<h4>Hooks</h4> I got to understand the <code>useEffect</code> hook alot more to handle side-effects,
+<h4>React Hooks</h4> I got to understand the <code>useEffect</code> hook alot more to handle side-effects,
 specifically, async data fetching. I decided to use <code>setState</code> to trigger <code>
   useEffect
 </code> calls which then made an async request to the API. I also created a custom hook for this logic
@@ -28,10 +28,10 @@ since I wanted to separate it from my home component.
   SEE CUSTOM HOOK >>
 </a>
 
-<h4>Data results</h4>
-The data was not in the friendliest format - strings were all caps and had legal abbreviations included,
-and money values were just numeric. I wrote some helper functions that I wrapped in a composed function
-which returned a formatted, user-friendly value. I also used JavaScript's global <code>
+<h4>Data transformation</h4>
+The data was not in the friendliest formats. All strings were in upper case and had legal abbreviations
+included, and money values were just unformatted numbers. I wrote some helper functions to transform
+the source data into formatted, user-friendly values. I also used JavaScript's global <code>
   Intl
 </code> object to format numbers into Colombian Pesos.
 <br />
@@ -43,17 +43,17 @@ which returned a formatted, user-friendly value. I also used JavaScript's global
   SEE HELPER FUNCTIONS >>
 </a>
 
-<h4>API</h4>I created a separate file for my API calls, which I then exported as an object. One call
-handled company queries for initial load, searching by region/name, or clicking the previous/next
-buttons. The other was a call to get all distinct regions, used to populate the region dropdown
-options. The <code>URLSearchParams</code> API to turn an object into a URL query string for the <code>
-  fetch
-</code> API call was very useful.
+<h4>API requests</h4>I created a separate file for my API requests. One call handled company queries
+for initial load, searching by region/name, or clicking the previous/next buttons. The other was a
+call to get all distinct regions, used to populate the region dropdown options. The <code>
+  URLSearchParams
+</code> API to turn an object into a URL query string for the <code>fetch</code> API call was very
+useful.
 <br />
 <a
   href="https://github.com/santidiazl/colombia-1000/blob/main/src/api.js"
   target="_blank"
   rel="noreferrer"
 >
-  SEE API >>
+  SEE API FILE >>
 </a>
