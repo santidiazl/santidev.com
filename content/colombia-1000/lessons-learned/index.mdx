@@ -17,11 +17,11 @@ semantically indicates tabular data, which is what I wanted to display.
 <h4>React Hooks</h4> I got to understand the <code>useEffect</code> hook alot more to handle side-effects,
 specifically, async data fetching. I decided to use <code>setState</code> to trigger <code>
   useEffect
-</code> calls which then made an async request to the API. I also created a custom hook for this logic
-since I wanted to separate it from my home component.
+</code> which then made async API requests. I also created a custom hook for this logic since I wanted
+to separate it from my home component.
 <br />
 <a
-  href="https://github.com/santidiazl/colombia-1000/blob/main/src/hooks/useDataFetch.js"
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/hooks/useCompanyFetch.ts"
   target="_blank"
   rel="noreferrer"
 >
@@ -36,7 +36,7 @@ the source data into formatted, user-friendly values. I also used JavaScript's g
 </code> object to format numbers into Colombian Pesos.
 <br />
 <a
-  href="https://github.com/santidiazl/colombia-1000/blob/main/src/helpers.js"
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/helpers.ts"
   target="_blank"
   rel="noreferrer"
 >
@@ -47,11 +47,11 @@ the source data into formatted, user-friendly values. I also used JavaScript's g
 for initial load, searching by region/name, or clicking the previous/next buttons. The other was a
 call to get all distinct regions, used to populate the region dropdown options. The <code>
   URLSearchParams
-</code> API to turn an object into a URL query string for the <code>fetch</code> API call was very
-useful.
+</code> Web API that converts an object into a URL query string for the <code>fetch()</code> call
+was very useful.
 <br />
 <a
-  href="https://github.com/santidiazl/colombia-1000/blob/main/src/api.js"
+  href="https://github.com/santidiazl/colombia-1000/blob/main/src/API.ts"
   target="_blank"
   rel="noreferrer"
 >
