@@ -7,3 +7,7 @@ This is the source repo for my personal website [santidev.com](https://santidev.
 * [Gatsby](https://github.com/gatsbyjs/gatsby)
 * [styled-components](https://github.com/styled-components)
 * [mdx](https://github.com/mdx-js/mdx)
+
+## License
+
+Licensed under the MIT License.
