@@ -1,5 +1,5 @@
 # [santidev.com](https://santidev.com) 
-This is the source repo for my personal website [santidev.com](https://santidev.com). It's based on Konstantin Muenster's Gatsby [starter](https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal) but I added routers as well as several other modifications. It is a [Jamstack](https://jamstack.org/what-is-jamstack/) site deployed via [Netlify](https://netlify.com).
+This is the source repo for my personal website [santidev.com](https://santidev.com). It's based on Konstantin Muenster's Gatsby [starter](https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal) but I added routers and made many other changes. It is a [Jamstack](https://jamstack.org/what-is-jamstack/) site deployed with [Netlify](https://netlify.com).
 
 ![image](https://user-images.githubusercontent.com/65519327/147620735-5ca4e70b-30f8-439b-8cea-f2d01d36e6cf.png)
 
