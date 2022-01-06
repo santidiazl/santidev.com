@@ -1,10 +1,9 @@
 module.exports = {
   // -- SITE SETTINGS -----
   author: '@santidiazl',
-  siteTitle: 'Santi Diaz | React/Node Full Stack Developer',
+  siteTitle: 'Santi Diaz | JavaScript Developer',
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
-  siteDescription:
-    'Website showcasing some of my Full Stack JavaScript work: Front End projects using React and Back End projects using Node/Express.',
+  siteDescription: 'Personal website of Santiago Diaz, a JavaScript developer.',
   siteUrl: 'https://www.santidev.com',
   siteLanguage: 'en_US',
   siteIcon: 'content/favicon.png', // Relative to gatsby-config file
@@ -82,7 +81,7 @@ module.exports = {
   },
   footerLinks: [
     {
-      name: 'Design: Gatsby starter by Konstantin Muenster, © 2021',
+      name: 'Design: Gatsby starter by Konstantin Muenster, © 2022',
       url: 'https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal',
     },
     // {

@@ -114,7 +114,6 @@ const Hero = ({ content }) => {
         >
           <h1 className="title">
             <div className="greetings">{frontmatter.greetings}</div>
-            {frontmatter.title}
           </h1>
           <h2 className="subtitle">
             {frontmatter.subtitle}

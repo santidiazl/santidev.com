@@ -17,10 +17,7 @@ const IndexPage = ({ data }) => {
   const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter;
 
   const globalState = {
-    // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
     isIntroDone: !useSplashScreen,
-    // darkMode is initially disabled, a hook inside the Layout component
-    // will check the user's preferences and switch to dark mode if needed
     darkMode: false,
   };
 
@@ -63,7 +60,6 @@ export const pageQuery = graphql`
           body
           frontmatter {
             greetings
-            title
             subtitle
             underlineOne
             subtitleTwo
@@ -106,7 +102,7 @@ export const pageQuery = graphql`
     }
     projects: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/index/projects/" }
+        fileAbsolutePath: { regex: "/index/project-previews/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }
