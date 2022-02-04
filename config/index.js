@@ -1,9 +1,9 @@
 module.exports = {
   // -- SITE SETTINGS -----
   author: '@santidiazl',
-  siteTitle: 'Santi Diaz | JavaScript Developer',
+  siteTitle: 'Santiago Diaz | Front-end Developer',
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
-  siteDescription: 'Personal website of Santiago Diaz, a JavaScript developer.',
+  siteDescription: 'Personal website of Santiago Diaz, a front-end developer.',
   siteUrl: 'https://www.santidev.com',
   siteLanguage: 'en_US',
   siteIcon: 'content/favicon.png', // Relative to gatsby-config file
