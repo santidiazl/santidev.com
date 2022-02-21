@@ -1,7 +1,7 @@
 module.exports = {
   // -- SITE SETTINGS -----
   author: '@santidiazl',
-  siteTitle: 'Santiago Diaz | Front-end Developer',
+  siteTitle: 'Santi Diaz | Front-end Developer | santidev.com',
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
   siteDescription: 'Personal website of Santiago Diaz, a front-end developer.',
   siteUrl: 'https://www.santidev.com',
