@@ -21,11 +21,10 @@ const ProjectPage = ({ data }) => {
     <GlobalStateProvider initialState={globalState}>
       <Layout>
         <SEO title={seoTitle} />
-        <Hero content={data.hero.edges} />
+        <Hero content={data.intro.edges} />
         <Skills content={data.techStack.edges} />
-        <Projects content={data.purpose.edges} />
-        <About content={data.lessonsLearned.edges} />
-        <About content={data.inProgress.edges} />
+        <Projects content={data.goals.edges} />
+        <About content={data.highlights.edges} />
         <Projects content={data.otherProjects.edges} />
       </Layout>
     </GlobalStateProvider>
@@ -49,7 +48,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    hero: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/hero/" } }) {
+    intro: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/1 intro/" } }) {
       edges {
         node {
           body
@@ -65,7 +64,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    techStack: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/tech-stack/" } }) {
+    techStack: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/2 tech-stack/" } }) {
       edges {
         node {
           exports {
@@ -85,9 +84,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    purpose: allMdx(
+    goals: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/colombia-1000/purpose/" }
+        fileAbsolutePath: { regex: "/colombia-1000/3 goals/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }
@@ -110,25 +109,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    lessonsLearned: allMdx(
-      filter: { fileAbsolutePath: { regex: "/colombia-1000/lessons-learned/" } }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            # imgAlt
-            # image {
-            #   childImageSharp {
-            #     gatsbyImageData(quality: 100)
-            #   }
-            #}
-          }
-        }
-      }
-    }
-    inProgress: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/in-progress/" } }) {
+    highlights: allMdx(filter: { fileAbsolutePath: { regex: "/colombia-1000/4 highlights/" } }) {
       edges {
         node {
           body
@@ -140,7 +121,7 @@ export const pageQuery = graphql`
     }
     otherProjects: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/colombia-1000/other-projects/" }
+        fileAbsolutePath: { regex: "/colombia-1000/6 other-projects/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }

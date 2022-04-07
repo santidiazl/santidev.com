@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import ContentWrapper from '../styles/contentWrapper';
-// import Context from '../context';
-import Social from './social';
 import Logo from './logo';
-import { footerLinks } from '../../config';
+import { footerLinks, navLinks } from '../../config';
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -34,6 +32,23 @@ const StyledContentWrapper = styled(ContentWrapper)`
     svg {
       fill: white;
     }
+    .cta-btn {
+      width: auto;
+      height: auto;
+      font-weight: 700;
+      color: white;
+      border-radius: ${({ theme }) => theme.borderRadius};
+      border: 0.125rem solid ${({ theme }) => theme.colors.primary};
+      background: black;
+      transition: 20ms ease-out;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+      margin: 0;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
   }
 `;
 
@@ -44,23 +59,38 @@ const StyledLink = styled.a`
   text-align: center;
 `;
 
-const Footer = () => (
-  <StyledFooter>
-    <StyledContentWrapper>
-      <Link to="/" aria-label="home">
-        <Logo size="1.5rem" color="white" />
-      </Link>
-      <div className="footer-links" data-testid="footer-links">
-        {footerLinks.map(({ name, url }) => (
-          <StyledLink key={name} href={url} target="_blank" rel="noreferrer">
-            {name}
-          </StyledLink>
-        ))}
-      </div>
-
-      <Social fontSize=".95rem" padding=".3rem 1.25rem" width="auto" withIcon />
-    </StyledContentWrapper>
-  </StyledFooter>
-);
+const Footer = () => {
+  const { button } = navLinks;
+  return (
+    <StyledFooter>
+      <StyledContentWrapper>
+        <Link to="/" aria-label="home">
+          <Logo size="1.5rem" color="white" />
+        </Link>
+        <div className="footer-links" data-testid="footer-links">
+          {footerLinks.map(({ name, url }) => (
+            <StyledLink key={name} href={url} target="_blank" rel="noreferrer">
+              {name}
+            </StyledLink>
+          ))}
+        </div>
+        {button.useFileName ? (
+          <a
+            className="cta-btn"
+            href={`/${button.fileName}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {button.name}
+          </a>
+        ) : (
+          <Link className="cta-btn" to={button.url}>
+            {button.name}
+          </Link>
+        )}
+      </StyledContentWrapper>
+    </StyledFooter>
+  );
+};
 
 export default Footer;

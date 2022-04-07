@@ -5,14 +5,13 @@ import 'fontsource-roboto/400.css';
 import 'fontsource-roboto/700.css';
 
 import { lightTheme } from '../styles/theme';
-import Context from '../context';
 import GlobalStyle from '../styles/globalStyle';
 import Header from './header';
 import Footer from './footer';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
-  require('smooth-scroll')('a[href*="#"]');
+  // require('smooth-scroll')('a[href*="#"]');
 }
 
 const StyledLayoutWrapper = styled.div`
@@ -38,7 +37,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
 };
 
 export default Layout;

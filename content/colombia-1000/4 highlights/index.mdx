@@ -1,0 +1,27 @@
+---
+title: 'Some highlights'
+---
+
+<h4>Displaying tabular data</h4>
+I debated between using a grid layout or a table element to display the rows of data representing companies.
+However, I opted for a table for semantic reasons - a table semantically indicates tabular data.
+<br />
+<a href="https://github.com/santidiazl/colombia1000.com/tree/main/src/components/CompanyTable" target="_blank" rel="noreferrer">SEE COMPANY TABLE COMPONENT >></a>
+
+
+<h4>Custom Hooks</h4> I learned a lot about the <code>useEffect</code> hook and how it handle side-effects,
+such as async data fetching. Filtering of the companies is done by querying the API via a custom async
+data-fetching hook.
+<br />
+<a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/hooks/useFetchResults.ts" target="_blank" rel="noreferrer">SEE CUSTOM HOOK >></a>
+
+<h4>Data transformation</h4>
+Helper functions were crucial for transforming the source data into formatted, user-friendly values.
+For example, I used JavaScript's global <code>Intl</code> object to format numbers into Colombian Pesos.
+<br />
+<a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/helpers/index.ts" target="_blank" rel="noreferrer" >SEE HELPER FUNCTIONS >></a>
+
+<h4>API requests</h4>
+To make requests, I opted for using the browser's native <code>fetch</code> API, with a light wrapper around it to facilitate them.
+<br />
+<a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/API.ts" target="_blank" rel="noreferrer">SEE FETCH WRAPPER >></a>

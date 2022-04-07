@@ -21,9 +21,9 @@ const ProjectPage = ({ data }) => {
     <GlobalStateProvider initialState={globalState}>
       <Layout>
         <SEO title={seoTitle} />
-        <Hero content={data.hero.edges} />
-        <Projects content={data.duties.edges} />
-        <About content={data.curriculum.edges} />
+        <Hero content={data.intro.edges} />
+        <Projects content={data.tasks.edges} />
+        <About content={data.difference.edges} />
         <Projects content={data.otherProjects.edges} />
       </Layout>
     </GlobalStateProvider>
@@ -47,7 +47,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    hero: allMdx(filter: { fileAbsolutePath: { regex: "/codigo-lab/hero/" } }) {
+    intro: allMdx(filter: { fileAbsolutePath: { regex: "/codigo-lab/1 intro/" } }) {
       edges {
         node {
           body
@@ -63,9 +63,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    duties: allMdx(
+    tasks: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/codigo-lab/duties/" }
+        fileAbsolutePath: { regex: "/codigo-lab/2 tasks/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }
@@ -88,7 +88,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    curriculum: allMdx(filter: { fileAbsolutePath: { regex: "/codigo-lab/curriculum/" } }) {
+    difference: allMdx(filter: { fileAbsolutePath: { regex: "/codigo-lab/3 difference/" } }) {
       edges {
         node {
           body
@@ -106,7 +106,7 @@ export const pageQuery = graphql`
     }
     otherProjects: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/codigo-lab/other-projects/" }
+        fileAbsolutePath: { regex: "/codigo-lab/4 other-projects/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }

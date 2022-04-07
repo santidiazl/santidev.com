@@ -6,7 +6,6 @@ import GlobalStateProvider from '../context/provider';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/sections/hero';
-import About from '../components/sections/about';
 import Skills from '../components/sections/skills';
 import Projects from '../components/sections/projects';
 
@@ -21,12 +20,8 @@ const ProjectPage = ({ data }) => {
     <GlobalStateProvider initialState={globalState}>
       <Layout>
         <SEO title={seoTitle} />
-        <Hero content={data.hero.edges} />
+        <Hero content={data.intro.edges} />
         <Skills content={data.techStack.edges} />
-        <About content={data.purpose.edges} />
-        <Projects content={data.spotlight.edges} />
-        <About content={data.currentStatus.edges} />
-        <About content={data.lessonsLearned.edges} />
         <Projects content={data.otherProjects.edges} />
       </Layout>
     </GlobalStateProvider>
@@ -50,7 +45,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    hero: allMdx(filter: { fileAbsolutePath: { regex: "/chat-app/hero/" } }) {
+    intro: allMdx(filter: { fileAbsolutePath: { regex: "/chat-app/1 intro/" } }) {
       edges {
         node {
           body
@@ -66,7 +61,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    techStack: allMdx(filter: { fileAbsolutePath: { regex: "/chat-app/tech-stack/" } }) {
+    techStack: allMdx(filter: { fileAbsolutePath: { regex: "/chat-app/2 tech-stack/" } }) {
       edges {
         node {
           exports {
@@ -86,76 +81,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    purpose: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/chat-app/purpose/" }
-        frontmatter: { visible: { eq: true } }
-      }
-      sort: { fields: [frontmatter___position], order: ASC }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-    currentStatus: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/chat-app/current-status/" }
-        frontmatter: { visible: { eq: true } }
-      }
-      sort: { fields: [frontmatter___position], order: ASC }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-    spotlight: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/chat-app/spotlight/" }
-        frontmatter: { visible: { eq: true } }
-      }
-      sort: { fields: [frontmatter___position], order: ASC }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            external
-            view
-            screenshot {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-            position
-            buttonVisible
-          }
-        }
-      }
-    }
-    lessonsLearned: allMdx(filter: { fileAbsolutePath: { regex: "/chat-app/lessons-learned/" } }) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
     otherProjects: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/chat-app/other-projects/" }
+        fileAbsolutePath: { regex: "/chat-app/3 other-projects/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }

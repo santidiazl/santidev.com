@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   display: none;
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 31.25rem;
     background: ${({ theme }) => theme.colors.background};
@@ -16,7 +16,7 @@ const StyledNav = styled.nav`
       color: ${({ theme }) => theme.colors.primary};
     }
   }
-  .nav-link {
+  /* .nav-link {
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
@@ -34,7 +34,7 @@ const StyledNav = styled.nav`
     &:hover::before {
       width: 100%;
     }
-  }
+  } */
   .cta-btn {
     width: auto;
     height: auto;
@@ -54,14 +54,9 @@ const StyledNav = styled.nav`
 `;
 
 const Navbar = () => {
-  const { menu, button } = navLinks;
+  const { button } = navLinks;
   return (
     <StyledNav>
-      {menu.map(({ name, url }, key) => (
-        <Link className="nav-link" key={key} to={url}>
-          {name}
-        </Link>
-      ))}
       {button.useFileName ? (
         <a
           className="cta-btn"

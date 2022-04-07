@@ -54,7 +54,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    hero: allMdx(filter: { fileAbsolutePath: { regex: "/index/hero/" } }) {
+    hero: allMdx(filter: { fileAbsolutePath: { regex: "/index/1 hero/" } }) {
       edges {
         node {
           body
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allMdx(filter: { fileAbsolutePath: { regex: "/index/about/" } }) {
+    about: allMdx(filter: { fileAbsolutePath: { regex: "/index/2 about/" } }) {
       edges {
         node {
           body
@@ -80,7 +80,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    skills: allMdx(filter: { fileAbsolutePath: { regex: "/index/skills/" } }) {
+    skills: allMdx(filter: { fileAbsolutePath: { regex: "/index/3 skills/" } }) {
       edges {
         node {
           exports {
@@ -102,7 +102,7 @@ export const pageQuery = graphql`
     }
     projects: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/index/project-previews/" }
+        fileAbsolutePath: { regex: "/index/4 projects/" }
         frontmatter: { visible: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contact: allMdx(filter: { fileAbsolutePath: { regex: "/index/contact/" } }) {
+    contact: allMdx(filter: { fileAbsolutePath: { regex: "/index/5 contact/" } }) {
       edges {
         node {
           body

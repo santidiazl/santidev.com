@@ -1,9 +1,9 @@
 module.exports = {
   // -- SITE SETTINGS -----
   author: '@santidiazl',
-  siteTitle: 'Santi Diaz | Front-end Developer | santidev.com',
+  siteTitle: 'Santi Diaz | JavaScript Developer | santidev.com',
   siteShortTitle: 'Santi Diaz', // Used as logo text in header, footer, and splash screen
-  siteDescription: 'Personal website of Santiago Diaz, a front-end developer.',
+  siteDescription: 'Personal website of Santiago Diaz, a JavaScript developer.',
   siteUrl: 'https://www.santidev.com',
   siteLanguage: 'en_US',
   siteIcon: 'content/favicon.png', // Relative to gatsby-config file
@@ -58,24 +58,10 @@ module.exports = {
 
   // -- NAVIGATION SETTINGS -----
   navLinks: {
-    menu: [
-      {
-        name: 'About Me',
-        url: '/#about',
-      },
-      {
-        name: 'Projects',
-        url: '/#projects',
-      },
-      {
-        name: 'Contact',
-        url: '/#contact',
-      },
-    ],
     button: {
       useFileName: true,
-      name: 'CV',
-      fileName: 'Santiago_Diaz_CV.pdf', // the file has to be placed inside the static folder at the root level
+      name: 'Resume',
+      fileName: 'Santiago_Diaz_Resume.pdf', // the file has to be placed inside the static folder at the root level
       url: '', // if useFileName=false, you can set an anchor link here and use the button for navigational purposes
     },
   },

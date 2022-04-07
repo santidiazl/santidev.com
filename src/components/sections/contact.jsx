@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { motion } from 'framer-motion';
 
+import Social from '../social';
 import useOnScreen from '../../hooks/useOnScreen';
 import ContentWrapper from '../../styles/contentWrapper';
 import Underlining from '../../styles/underlining';
@@ -29,7 +30,6 @@ const StyledContentWrapper = styled(ContentWrapper)`
     p {
       margin-top: 0;
       margin-bottom: 0;
-      color: #696969;
     }
     .profile {
       display: flex;
@@ -54,6 +54,12 @@ const StyledContentWrapper = styled(ContentWrapper)`
       .details {
         font-size: 1.125rem;
         line-height: 2rem;
+        a {
+          margin-bottom: 1rem;
+        }
+        svg:hover {
+          fill: ${({ theme }) => theme.colors.primary};
+        }
       }
     }
   }
@@ -85,12 +91,13 @@ const Contact = ({ content }) => {
             <GatsbyImage className="avatar" image={getImage(frontmatter.profileImage)} />
           </div>
           <div className="details">
-            <strong>{frontmatter.name}</strong>
-            <br />
-            <a href={`mailto:${frontmatter.email}`}>
-              <Underlining highlight>{frontmatter.email}</Underlining>
-            </a>
-            <span />
+            <p>{frontmatter.name}</p>
+            <p>
+              <a href={`mailto:${frontmatter.email}`}>
+                <Underlining highlight>{frontmatter.email}</Underlining>
+              </a>
+            </p>
+            <Social fontSize=".95rem" padding="1.25rem 1.25rem" width="auto" withIcon />
           </div>
         </div>
       </StyledContentWrapper>
