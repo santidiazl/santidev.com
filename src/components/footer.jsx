@@ -59,38 +59,20 @@ const StyledLink = styled.a`
   text-align: center;
 `;
 
-const Footer = () => {
-  const { button } = navLinks;
-  return (
-    <StyledFooter>
-      <StyledContentWrapper>
-        <Link to="/" aria-label="home">
-          <Logo size="1.5rem" color="white" />
-        </Link>
-        <div className="footer-links" data-testid="footer-links">
-          {footerLinks.map(({ name, url }) => (
-            <StyledLink key={name} href={url} target="_blank" rel="noreferrer">
-              {name}
-            </StyledLink>
-          ))}
-        </div>
-        {button.useFileName ? (
-          <a
-            className="cta-btn"
-            href={`/${button.fileName}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {button.name}
-          </a>
-        ) : (
-          <Link className="cta-btn" to={button.url}>
-            {button.name}
-          </Link>
-        )}
-      </StyledContentWrapper>
-    </StyledFooter>
-  );
-};
-
+const Footer = () => (
+  <StyledFooter>
+    <StyledContentWrapper>
+      <Link to="/" aria-label="home">
+        <Logo size="1.5rem" color="white" />
+      </Link>
+      <div className="footer-links" data-testid="footer-links">
+        {footerLinks.map(({ name, url }) => (
+          <StyledLink key={name} href={url} target="_blank" rel="noreferrer">
+            {name}
+          </StyledLink>
+        ))}
+      </div>
+    </StyledContentWrapper>
+  </StyledFooter>
+);
 export default Footer;

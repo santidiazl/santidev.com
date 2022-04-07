@@ -9,6 +9,7 @@ import Social from '../social';
 import useOnScreen from '../../hooks/useOnScreen';
 import ContentWrapper from '../../styles/contentWrapper';
 import Underlining from '../../styles/underlining';
+import { navLinks } from '../../../config';
 
 const StyledSection = styled(motion.section)`
   width: 100%;
@@ -62,11 +63,29 @@ const StyledContentWrapper = styled(ContentWrapper)`
         }
       }
     }
+    .cta-btn {
+      width: auto;
+      height: auto;
+      font-weight: 700;
+      color: black;
+      border-radius: ${({ theme }) => theme.borderRadius};
+      border: 0.125rem solid ${({ theme }) => theme.colors.primary};
+      background: ${({ theme }) => theme.colors.background};
+      transition: 20ms ease-out;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+      margin: 0;
+      &:hover {
+        background: ${({ theme }) => theme.colors.primary};
+        color: ${({ theme }) => theme.colors.background};
+      }
+    }
   }
 `;
 
 const Contact = ({ content }) => {
   const { body, frontmatter } = content[0].node;
+  const { button } = navLinks;
 
   // Required for animation
   const ref = useRef();
