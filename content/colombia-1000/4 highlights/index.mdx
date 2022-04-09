@@ -9,17 +9,17 @@ However, I opted for a table for semantic reasons - a table semantically indicat
 <a href="https://github.com/santidiazl/colombia1000.com/tree/main/src/components/CompanyTable" target="_blank" rel="noreferrer">SEE COMPANY TABLE COMPONENTS >></a>
 
 
-<h4>Custom Hooks</h4> I learned a lot about the <code>useEffect</code> hook and how it is meant to handle side-effects,
+<h4>Custom hooks</h4> I learned a lot about the <code>useEffect</code> hook and how it is meant to handle side-effects,
 such as async data fetching. Filtering of the companies is done by querying the API via a custom async
 data-fetching hook.
 <br />
 <a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/components/CompanyTable/use-fetch-companies.hook.ts#L9" target="_blank" rel="noreferrer">SEE FETCH COMPANIES HOOK >></a>
 
-<h4>Data transformation</h4>
+<h4>Data cleanup</h4>
 Helper functions were crucial for transforming the source data into formatted, user-friendly values.
 For example, I used JavaScript's global <code>Intl</code> object to format numbers into Colombian Pesos.
 <br />
-<a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/helpers/index.ts" target="_blank" rel="noreferrer" >SEE HELPERS >></a>
+<a href="https://github.com/santidiazl/colombia1000.com/blob/main/src/components/CompanyTable/CompanyTable.helpers.ts" target="_blank" rel="noreferrer" >SEE DATA CLEANUP HELPERS >></a>
 
 <h4>API requests</h4>
 To make requests, I opted for using the browser's native <code>fetch</code> API, with a light wrapper around it for configuration.
