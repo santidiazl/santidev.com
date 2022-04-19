@@ -76,5 +76,3 @@ yarn-error.log
 # Config files
 .lintstagedrc.js
 .eslintrc.js
-
-static
